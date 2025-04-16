@@ -1,5 +1,5 @@
 # AI Driven Career Navigator Platform
-![alt Home Page]([http://url/to/img.png](https://github.com/hariharan1009/nextstep/blob/main/public/homepage.png))
+![alt Home Page](https://github.com/hariharan1009/nextstep/blob/main/public/homepage.png)
 
 # NextStep  
 
