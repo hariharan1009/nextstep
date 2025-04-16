@@ -1,4 +1,6 @@
 # AI Driven Career Navigator Platform
+![alt Home Page]([http://url/to/img.png](https://github.com/hariharan1009/nextstep/blob/main/public/homepage.png))
+
 # NextStep  
 
 **NextStep** is a career-driven navigator platform built using **TypeScript** and **CSS**, designed to help individuals accelerate their professional growth. The platform offers features like **AI-powered resume analysis** and a **virtual career assistant** to guide users through their journey to success.  
