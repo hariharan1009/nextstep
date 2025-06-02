@@ -1,0 +1,154 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #4338ca, #2563eb);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navLinks li {
+  font-size: 1.1rem;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.loginLink {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.loginLink:hover {
+  color: #d1d5db;
+}
+
+.profileContainer {
+  position: relative;
+  cursor: pointer;
+}
+
+.profileIcon {
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.profileIcon:hover {
+  color: #d1d5db;
+  transform: scale(1.1);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1001;
+  width: 150px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdownMenu a:hover {
+  background: #f1f5f9;
+  color: #1d4ed8;
+}
+
+.logoutButton {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.8rem 1.5rem;
+  background: none;
+  border: none;
+  color: #ff5353;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: #ff5353;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

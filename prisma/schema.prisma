@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String   @id @default(uuid())
+  email          String   @unique
+  hashedPassword       String
+  fullName           String
+  role           Role     @default(USER)
+  profile        Profile?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  interactions   ChatbotInteraction[]
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+model Profile {
+  id          String    @id @default(uuid())
+  userId      String    @unique
+  user        User      @relation(fields: [userId], references: [id])
+  bio         String?
+  skills      Skill[]
+  experience  Experience[]
+  preferences Json?
+}
+
+model Skill {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  users       Profile[]
+}
+
+model Experience {
+  id          String   @id @default(uuid())
+  profileId   String
+  profile     Profile  @relation(fields: [profileId], references: [id])
+  title       String
+  company     String
+  startDate   DateTime
+  endDate     DateTime?
+  description String?
+}
+
+
+model ChatbotInteraction {
+  id          String   @id @default(uuid())
+  userId      String?
+  user        User?    @relation(fields: [userId], references: [id])
+  query       String
+  response    String
+  createdAt   DateTime @default(now())
+}
+

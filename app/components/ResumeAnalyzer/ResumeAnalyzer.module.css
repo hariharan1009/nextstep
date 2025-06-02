@@ -1,0 +1,171 @@
+.container {
+  max-width: 750px;
+  width: 90%;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.uploadSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f3f4f6, #ffffff);
+  border: 2px dashed #3b82f6;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+}
+
+.uploadSection:hover {
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+  border-color: #1d4ed8;
+  transform: scale(1.02);
+}
+
+.uploadSection::before {
+  content: "Drag & Drop Your Resume Here";
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  text-align: center;
+}
+
+.uploadSection::after {
+  content: "or Click to Upload";
+  font-size: 14px;
+  font-weight: 400;
+  color: #9ca3af;
+  margin-top: 10px;
+}
+
+.uploadSection input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.uploadSection:hover::before {
+  color: #1d4ed8;
+}
+
+.uploadSection:hover::after {
+  color: #2563eb;
+}
+
+.textArea {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+  margin-top: 20px;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textArea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.5);
+  background: #ffffff;
+}
+
+.button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: scale(1.03);
+}
+
+.button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.analysisSection {
+  width: 100%;
+  margin-top: 25px;
+  padding: 20px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.analysisSection h2 {
+  font-size: 20px;
+  color: #1e40af;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.analysisSection p {
+  font-size: 15px;
+  color: #374151;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+
+  .button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .textArea {
+    font-size: 14px;
+  }
+
+  .analysisSection h2 {
+    font-size: 18px;
+  }
+
+  .analysisSection p {
+    font-size: 14px;
+  }
+}

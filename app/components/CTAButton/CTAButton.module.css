@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 3rem;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.6);
+}
+
+.button:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
