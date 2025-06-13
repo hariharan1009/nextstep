@@ -23,27 +23,27 @@ export default function Footer() {
   const socialLinks: SocialLink[] = [
     {
       icon: <FaGithub size={24} />,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/",
       label: "GitHub"
     },
     {
       icon: <FaLinkedin size={24} />,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://linkedin.com/in/",
       label: "LinkedIn"
     },
     {
       icon: <FaInstagram size={24} />,
-      href: "https://instagram.com/yourusername",
+      href: "https://instagram.com/",
       label: "Instagram"
     },
     {
       icon: <FaYoutube size={24} />,
-      href: "https://youtube.com/yourchannel",
+      href: "https://youtube.com/",
       label: "YouTube"
     },
     {
       icon: <FaEnvelope size={24} />,
-      href: "mailto:youremail@example.com",
+      href: "mailto:mdhari707@example.com",
       label: "Email"
     }
   ];
