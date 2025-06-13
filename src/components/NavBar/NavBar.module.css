@@ -1,0 +1,160 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #4338ca, #2563eb);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 0.75rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  font-size: 1.1rem;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1001;
+  padding: 0.5rem;
+}
+
+.menuButton:hover {
+  transform: scale(1.1);
+}
+
+.hamburgerIcon, .closeIcon {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.closeIcon {
+  font-size: 1.8rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .navLinks {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .navContainer {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: linear-gradient(135deg, #4338ca, #2563eb);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    gap: 2rem;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+  
+  .navContainer.active {
+    left: 0;
+  }
+  
+  .navLinks {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .menuButton {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.8rem;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+  
+  .navContainer {
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+}

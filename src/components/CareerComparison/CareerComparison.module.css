@@ -1,0 +1,171 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.vs {
+  color: #7f8c8d;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.button {
+  background-color: #3498db; /* Blue color */
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+.disabledButton {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.disabledButton:hover {
+  background-color: #bdc3c7;
+}
+
+.error {
+  color: #e74c3c;
+  background-color: #fadbd8;
+  padding: 0.8rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  color: #3498db;
+}
+
+.loading span {
+  animation: bounce 1s infinite alternate;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.resultTitle {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.resultText {
+  color: #34495e;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.markdownContent {
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.markdownContent h3 {
+  color: #2c3e50;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdownContent ul {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.markdownContent li {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .inputGroup {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .vs {
+    margin: 0.5rem 0;
+  }
+}

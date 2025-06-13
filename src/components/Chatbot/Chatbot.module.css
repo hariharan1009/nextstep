@@ -1,0 +1,201 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.header {
+  padding: 16px;
+  background-color: #3f51b5;
+  color: white;
+  text-align: center;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.messagesContainer {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.welcomeMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #444;
+  text-align: center;
+}
+
+.welcomeMessage p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.suggestions {
+  background-color: #f0f4ff;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.suggestions p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.suggestions ul {
+  text-align: left;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.suggestions li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.userMessage {
+  align-self: flex-end;
+  background-color: #3f51b5;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.assistantMessage {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #333;
+  border-bottom-left-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.inputForm {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #e0e0e0;
+  background-color: white;
+}
+
+.inputField {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.inputField:focus {
+  border-color: #3f51b5;
+}
+
+.sendButton {
+  margin-left: 8px;
+  padding: 12px 24px;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.sendButton:hover {
+  background-color: #303f9f;
+}
+
+.sendButton:disabled {
+  background-color: #9fa8da;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  padding: 8px 16px;
+  background-color: #ffebee;
+  color: #d32f2f;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.typingIndicator {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+}
+
+.typingIndicator span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #666;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: typingAnimation 1.4s infinite ease-in-out;
+}
+
+.typingIndicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingIndicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingAnimation {
+  0%, 60%, 100% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
